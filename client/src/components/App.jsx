@@ -3,7 +3,6 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Note from "./Note";
 import CreateArea from "./CreateArea";
-import axios from "axios";
 
 function App() {
   const [noteData, setNoteData] = useState([{}]);
@@ -12,8 +11,7 @@ function App() {
   useEffect(() => {
     console.log("UseEffect");
     let isCencelled = false;
-    axios
-      .get("/api")
+    fetch("/api")
       .then((response) => response.json())
       .then((json) => {
         if (!isCencelled) {
