@@ -1,6 +1,7 @@
 import React from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { axiosInstance } from "../config";
+import axios from "axios";
 
 function Note(props) {
   function handleClick() {
@@ -8,7 +9,7 @@ function Note(props) {
     const idNote = {
       id: props.id,
     };
-    axiosInstance.post("/api/deleteNote", idNote);
+    axios.post("/api/deleteNote", idNote);
   }
 
   return (
