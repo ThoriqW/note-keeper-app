@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const app = express();
 
 mongoose.connect(
-  "mongodb+srv://admin-thoriq:Barbossa5678@cluster0.ysri0.mongodb.net/blogDB"
+  "mongodb+srv://admin-thoriq:Barbossa5678@cluster0.ysri0.mongodb.net/notesDB"
 );
 
 const Note = mongoose.model("Note", { title: String, content: String });
