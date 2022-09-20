@@ -1,6 +1,5 @@
 import React from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { axiosInstance } from "../config";
 import axios from "axios";
 
 function Note(props) {
